@@ -16,8 +16,8 @@ app.get('/app1', (req, res) => {
   res.send('Hello this Apps 1!')
 });
 
-app.get('/app2', (req, res) => {
-  res.send('Hello this App 2!')
+app.get('/home', (req, res) => {
+  res.send('Wellcome, This is new Project..')
 });
 
 app.get('/users', (req, res, next) => {
