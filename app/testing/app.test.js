@@ -48,4 +48,4 @@ describe('Integration Test Connect Database', () => {
     const response = await request(app).get('/users');
     expect(response.status).toBe(200);
   });
-})
+});
