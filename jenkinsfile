@@ -27,5 +27,16 @@ pipeline {
                 npm test'''
             }
         }
+
+        stage('CODE REVIEW'){
+            steps{
+                sh ''' cd app
+                sonar-scanner \
+                    -Dsonar.projectKey=simple-apps \
+                    -Dsonar.sources=. \
+                    -Dsonar.host.url=http://172.23.11.13:9000 \
+                    -Dsonar.login=sqp_0ed2cf9385afa21b6162d32e97d935b8cb3c7380 '''
+            }
+        }
     }
 }
