@@ -46,7 +46,7 @@ pipeline {
             }
         }
 
-        stage('BUILD COMPOSE-PUSH'){
+        stage('BUILD PUSH'){
             steps{
                 sh '''
                 docker push ajisofyan/simple-aji:latest'''
