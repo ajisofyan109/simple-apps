@@ -5,10 +5,26 @@ pipeline {
         }
     }
 
+    tools {nodejs "nodejs 18.16.0"}
+
     stages {
         stage('CHECKOUT SCM') {
             steps {
                 git branch: 'main', url: 'https://github.com/ajisofyan109/simple-apps.git'
+            }
+        }
+
+        stage('BUILD MODULE'){
+            steps {
+                sh '''cd app
+                npm install'''
+            }
+        }
+
+        stage('UNIT TEST'){
+            steps {
+                sh '''cd app
+                npm test'''
             }
         }
     }
