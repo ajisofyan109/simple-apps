@@ -46,10 +46,10 @@ pipeline {
             }
         }
 
-        stage('BUILD PUSH'){
+        stage('DOCKER PUSH'){
             steps{
                 sh '''
-                docker push ajisofyan/simple-aji:latest'''
+                docker push ajisofyan109/simple-aji:latest'''
             }
         }
     }

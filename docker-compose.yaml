@@ -1,7 +1,7 @@
 services:
   apps:
     build: ./app
-    image: ajisofyan/simple-aji:latest
+    image: ajisofyan109/simple-aji:latest
     ports:
       - "10000:3000"
     restart: always
