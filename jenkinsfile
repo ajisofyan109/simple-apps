@@ -45,5 +45,12 @@ pipeline {
                 docker compose up -d '''
             }
         }
+
+        stage('BUILD COMPOSE-DOCKER'){
+            steps{
+                sh '''
+                docker push ajisofyan/simple-aji:latest'''
+            }
+        }
     }
 }
