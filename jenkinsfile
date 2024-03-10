@@ -1,0 +1,15 @@
+pipeline {
+    agent {
+        node{
+            label "docker-aji"
+        }
+    }
+
+    stages {
+        stage('CHECKOUT SCM') {
+            steps {
+                git branch: 'main', url: 'https://github.com/ajisofyan109/simple-apps.git'
+            }
+        }
+    }
+}
